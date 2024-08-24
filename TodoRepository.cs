@@ -74,9 +74,8 @@ public class TodoRepository {
 
         return todos;
     }
-    
-    public async Task UpdateTodoAsync(Todo todo)
-    {
+
+    public async Task UpdateTodoAsync(Todo todo) {
         await using SqliteConnection connection = new(ConnectionString);
         await connection.OpenAsync();
 
